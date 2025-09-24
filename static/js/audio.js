@@ -4,13 +4,13 @@ const musicHome = new Audio("/static/audio/musica(HOME).mp3");
 musicHome.loop = true;
 const soundClick = new Audio("/static/audio/sonido(HOME).mp3");
 
-// Variable para asegurar que la música solo se inicie con interacción del usuario
+// Interaccion del usuario
 let hasInteracted = localStorage.getItem('userHasInteracted') === 'true';
 
 // Función para intentar reproducir la música de fondo
 function playHomeMusic() {
     if (hasInteracted && localStorage.getItem('musicMuted') !== 'true' && musicHome.paused) {
-        // CAMBIO: Carga la posición guardada de la canción antes de reproducir
+        // Carga la posición guardada de la canción antes de reproducir *Error por los momentos, pendiente de arreglar*
         const savedTime = localStorage.getItem('musicHomeTime');
         if (savedTime) {
             musicHome.currentTime = parseFloat(savedTime);
@@ -19,7 +19,7 @@ function playHomeMusic() {
     }
 }
 
-// Función para reproducir el sonido de clic
+// Sonido de clic
 function playClickSound() {
     if (localStorage.getItem('soundMuted') !== 'true') {
         soundClick.currentTime = 0;
@@ -27,7 +27,7 @@ function playClickSound() {
     }
 }
 
-// Función para actualizar el estado de los botones
+// Actualizar el estado de los botones
 function updateGlobalAudioControls(musicBtn, soundBtn) {
     if (localStorage.getItem('musicMuted') === 'true') {
         musicHome.pause();
@@ -42,7 +42,7 @@ function updateGlobalAudioControls(musicBtn, soundBtn) {
     }
 }
 
-// CAMBIO: Guardar la posición de la música al salir de la página
+// Guardar la posición de la música al salir de la página
 window.addEventListener('beforeunload', () => {
     localStorage.setItem('musicHomeTime', musicHome.currentTime);
 });

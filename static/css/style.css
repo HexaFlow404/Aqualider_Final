@@ -67,7 +67,7 @@ body { background: linear-gradient(135deg, #a8e0ff 0%, #dbefff 100%); }
 .animation-box { flex: 1; min-width: 300px; height: 300px; background: #87CEEB; border-radius: 15px; position: relative; overflow: hidden; }
 .instructions { flex: 1; min-width: 300px; } .instructions h2 { color: var(--dark-blue); } .instructions ol { padding-left: 20px; } .instructions li { margin-bottom: 15px; line-height: 1.6; }
 
-/* CAMBIO: Animaciones del Tutorial SECUENCIALES Y CORREGIDAS 100% */
+/* CAMBIO: Animaciones del Tutorial */
 .animation-box .scene { position: absolute; width: 100%; height: 100%; visibility: hidden; }
 .animation-box .scene-1 { animation: scene-1-visibility 10s infinite; }
 .animation-box .scene-2 { animation: scene-2-visibility 10s infinite; }
@@ -81,7 +81,7 @@ body { background: linear-gradient(135deg, #a8e0ff 0%, #dbefff 100%); }
 .trash-icon { font-size: 30px; top: 48%; animation-delay: 6.5s; }
 .success-text { position: absolute; top: 30%; left: 50%; transform: translateX(-50%); font-size: 24px; color: #28a745; font-weight: bold; opacity: 0; animation: show-success-text 5s infinite 5s; }
 .pipe { position: absolute; width: 100%; background-color: #B0B0B0; border: 4px solid #888888; box-sizing: border-box; }
-/* CAMBIO: Tubos más cortos para un hueco más grande */
+/* Tubos de Animacion */
 .pipe-upper { top: 0; height: 30%; } 
 .pipe-lower { bottom: 0; height: 30%; }
 .spacebar-container { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); text-align: center; z-index: 10; animation: spacebar-visibility 10s infinite; }
@@ -96,7 +96,7 @@ body { background: linear-gradient(135deg, #a8e0ff 0%, #dbefff 100%); }
 @keyframes show-success-text { 0%, 50% {opacity: 0;} 55%, 80% {opacity: 1;} 90%, 100% {opacity: 0;} }
 @keyframes press-space { 0%, 40%, 100% { transform: scale(1); } 50% { transform: scale(0.95); } }
 
-/* CAMBIO: Página ESTADÍSTICAS con fondo GOD y sin cortes */
+/* Página Estadisticas */
 .stats-page {
     background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     background-attachment: fixed;
